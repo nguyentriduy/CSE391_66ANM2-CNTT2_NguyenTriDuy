@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Test HTML</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        thead th{
+            font-weight:bold;
+        }
+        tbody th{
+            font-weight:normal;
+        }
+        thead tr:nth-child(3) th:nth-child(3),
+        thead tr:nth-child(3) th:nth-child(4),
+        thead tr:nth-child(3) th:nth-child(5),
+        thead tr:nth-child(3) th:nth-child(6),
+        thead tr:nth-child(3) th:nth-child(7),
+        thead tr:nth-child(3) th:nth-child(8) {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2" rowspan="2">Student</th>
+                <th colspan="4">Exam</th>
+                <th colspan="4">2nd Exam</th>
+                <th colspan="2" rowspan="2">Final Grade</th>
+            </tr>
+            <tr>
+                <th>Q1</th>
+                <th>Q2</th>
+                <th>Q3</th>
+                <th rowspan="2">Grade</th>
+                <th>Q1</th>
+                <th>Q2</th>
+                <th>Q3</th>
+                <th rowspan="2">Grade</th>
+            </tr>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>8</th>
+                <th>7</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>NR</th>
+                <th>R</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>80549061</th>
+                <th>John</th>
+                <th>70%</th>
+                <th>100%</th>
+                <th>100%</th>
+                <th>17.6</th>
+                <th colspan="4"></th>
+                <th>17.6</th>
+                <th>18</th>
+            </tr>
+            <tr>
+                <th>80549062</th>
+                <th>Mary</th>
+                <th>10%</th>
+                <th>50%</th>
+                <th>50%</th>
+                <th>6.8</th>
+                <th>100%</th>
+                <th>100%</th>
+                <th>50%</th>
+                <th>16.5</th>
+                <th>16.5</th>
+                <th>17</th>
+            </tr>
+            <tr>
+                <th>80549063</th>
+                <th>Claire</th>
+                <th colspan="4"></th>
+                <th>50%</th>
+                <th>50%</th>
+                <th>50%</th>
+                <th>10.0</th>
+                <th>10.0</th>
+                <th>10</th>
+            </tr>
+        </tbody>
+    </table>
+    </body>
+    </html>

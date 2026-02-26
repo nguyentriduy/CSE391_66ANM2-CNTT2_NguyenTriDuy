@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Thông Tin Cá Nhân</title>
+</head>
+<body>
+    <table border="1" cellpadding="10" cellspacing="0" width="600" align="center">
+        <tr>
+            <td>
+                <h2>Basic Info</h2>
+                <hr>
+                <table border="0" cellpadding="8" cellspacing="0">
+                    <tr>
+                        <td><label for="EmployeeID">Employee ID</label></td>
+                        <td><input type="text" id="EmployeeID" name="EmployeeID" value="9"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lastName">Last Name</label></td>
+                        <td><input type="text" id="lastName" name="lastName" value="Dodsworth"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="firstName">First Name</label></td>
+                        <td>
+                            <select id="firstName" name="First Name">
+                                <option value="Anne">Anne</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Gender</label></td>
+                        <td>
+                            <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label><br>
+                            <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label><br>
+                            <input type="radio" id="xxx" name="gender" value="xxx" checked> <label for="xxx">XXX</label><br>
+                            <input type="radio" id="zzz" name="gender" value="zzz"> <label for="zzz">ZZZ</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="title">Title</label></td>
+                        <td><input type="text" id="title" name="title" value="Sales Representative" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="suffix">Suffix</label></td>
+                        <td><input type="text" id="suffix" name="suffix" value="Ms." size="50"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="birthDate">BirthDate</label></td>
+                        <td><input type="datetime-local" id="birthDate" name="birthDate" value="1969-07-02T00:00"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="hireDate">HireDate</label></td>
+                        <td><input type="datetime-local" id="hireDate" name="hireDate" value="1994-11-15T00:00"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ssn">SSN # (if applicable)</label></td>
+                        <td><input type="text" id="ssn" name="ssn"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="reportsTo">Reports To</label></td>
+                        <td>
+                            <select id="reportsTo" name="reportsTo">
+                                <option value="Buchanan">Buchanan</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <h2>Contact Info</h2>
+                <hr>
+                <table border="0" cellpadding="8" cellspacing="0">
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" id="email" name="email" value="name@example.com"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Address</label></td>
+                        <td><input type="text" id="address" name="address" value="7 Houndstooth Rd."></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">City</label></td>
+                        <td><input type="text" id="city" name="city" value="London"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="region">Region</label></td>
+                        <td><input type="text" id="region" name="region"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="postalCode">Postal Code</label></td>
+                        <td><input type="text" id="postalCode" name="postalCode" value="WG2 7LT"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="country">Country</label></td>
+                        <td>
+                            <select id="country" name="country">
+                                <option value="Russian Federation">Russian Federation</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">US Home Phone</label></td>
+                        <td><input type="tel" id="phone" name="phone" value="(234)234-2342"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="photo">Photo</label></td>
+                        <td><input type="text" id="photo" name="photo" value="EmpID9.bmp"></td>
+                    </tr>
+                </table>
+
+                <h2>Optional Info</h2>
+                <hr>
+                <table border="0" cellpadding="8" cellspacing="0">
+                    <tr>
+                        <td><label>Notes</label></td>
+                        <td>
+                            <textarea name="notes">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and GermanZZZ</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Preferred Shift</label></td>
+                        <td>
+                            <input type="radio" id="regular" name="shift" value="regular"> <label for="regular">Regular</label>
+                            <input type="radio" id="gravy" name="shift" value="gravyYard" checked> <label for="gravy">Gravy Yard</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Active?</label></td>
+                        <td><input type="checkbox" id="active" name="active" checked></td>
+                    </tr>
+                    <tr>
+                        <td><label>Are you human?</label></td>
+                        <td><input type="text" id="humanCheck" name="humanCheck" value="TIDAWO" placeholder="Click to change"></td>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" value="Submit">
+                <input type="button" value="Cancel" onclick="window.location.href='/'">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
