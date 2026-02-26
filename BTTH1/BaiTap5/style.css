@@ -1,0 +1,203 @@
+/* Thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #212529;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.nav-link.active {
+    color: white;
+}
+
+.search-input {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+.btn-search {
+    padding: 6px 12px;
+    border: 1px solid #0d6efd;
+    background: transparent;
+    color: #0d6efd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Nội dung chính */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Bảng */
+.table-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #f1f3f5;
+}
+
+/* Nút bấm */
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.btn-add { background: #0d6efd; color: white; }
+.btn-edit { background: #ffc107; color: black; }
+.btn-delete { background: #dc3545; color: white; }
+.btn-save { background: #198754; color: white; }
+.btn-cancel { background: #6c757d; color: white; margin-left: 10px; }
+
+/* --- LOGIC MODAL (HTML/CSS ONLY) --- */
+
+/* Ẩn checkbox đi */
+.modal-state {
+    display: none;
+}
+
+/* Lớp phủ đen phía sau */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none; /* Mặc định ẩn */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Khi checkbox được check -> hiện modal */
+.modal-state:checked ~ .modal-overlay {
+    display: flex;
+}
+
+.modal-box {
+    background: white;
+    width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: slideDown 0.3s ease-out;
+}
+
+.modal-header {
+    background: #0d6efd;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input, .form-group select {
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.modal-footer {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    text-align: right;
+    border-top: 1px solid #dee2e6;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
