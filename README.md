@@ -1,0 +1,4 @@
+CSE391_66ANM2-CNTT2
+STT: 24
+MSV: 2251061760
+Họ tên: Nguyễn Trí Duy
