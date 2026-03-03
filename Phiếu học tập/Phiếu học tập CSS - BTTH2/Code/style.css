@@ -1,0 +1,207 @@
+/* Bai tap thuc hanh 1 */
+/* TODO 1: Universal selector reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Nên thêm vào để dễ quản lý layout */
+}
+
+/* TODO 2: Type selector cho body */
+body {
+    font-family: Arial;
+    background-color: #f5f5f5;
+}
+
+/* TODO 3: ID selector cho #main-header */
+#main-header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* TODO 4: Class selector cho .nav-link */
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* TODO 5: Group selector cho h1, h2, h3 */
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+}
+
+/* TODO 6: Descendant selector cho nav a */
+nav a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* TODO 7: Pseudo-class selector cho a:hover */
+a:hover {
+    color: #ff6600;
+    background-color: #eee;
+}
+
+/* Bai tap thuc hanh 2 */
+/* Bước 1: Reset box-sizing cho toàn trang */
+* {
+    box-sizing: border-box;
+}
+
+/* Bước 2: Style cho .posts container */
+.posts {
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+    margin: 40px auto;  /* Căn giữa container */
+    text-align: center;
+    
+}
+
+/* Bước 3: Style cho .card */
+.card {
+    width: 30%; /* Chia 3 cột trừ khoảng cách */
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    background: white;
+    border-radius: 8px;
+    vertical-align: top;   
+}
+
+/* Bước 4: Style cho .btn */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #0056b3; /* Đổi màu khi hover */
+}
+
+/* Bai tap thuc hanh 3A */
+/* Cải tiến nav bằng Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #f8f9fa;
+    padding: 15px;
+}
+
+/* Cải tiến .posts bằng Flexbox */
+.posts {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống hàng khi hết chỗ */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.card {
+    flex: 0 0 30%; /* Đảm bảo mỗi card chiếm khoảng 1/3 chiều rộng */
+}
+
+/* Responsive: Khi màn hình < 768px */
+@media (max-width: 768px) {    
+    .posts {
+        flex-direction: column; /* Chuyển thành cột */
+        align-items: center;
+    }
+        
+    .card {
+        flex: 1 1 100%; /* Chiếm trọn chiều rộng */
+    }
+}
+
+/* Bai tap thuc hanh 3B */
+/* --- PHẦN 1: STYLE GỐC (Áp dụng cho Desktop > 768px) --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    gap: 16px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    font-size: 2rem;
+    border-radius: 8px;
+}
+
+/* --- PHẦN 2: TABLET (<= 768px) --- */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột */
+        padding: 0 20px; 
+    }
+    .item {
+        height: 120px;
+        font-size: 1.75rem;
+    }
+}
+
+/* --- PHẦN 3: MOBILE (<= 576px) --- */
+@media (max-width: 576px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 cột */
+        padding: 0 15px;
+    }
+    .item {
+        height: 100px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Bai tap thuc hanh 4 */
+/* Header sticky */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Đảm bảo header luôn nổi trên các phần tử khác */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Hiệu ứng nổi */
+}
+
+/* Nút Scroll to Top */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px;
+    transition: 0.3s; /* Hiệu ứng mượt mà */
+}
+
+.scroll-top:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Responsive: Menu dọc trên mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Chuyển menu sang dọc */
+    }
+}
