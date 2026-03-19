@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký nhiều bước</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark text-white px-4">
+    <span class="navbar-brand">Trường Đại học Thủy lợi</span>
+    <div>
+      <a class="text-white me-3" href="#">Trang chủ</a>
+      <a class="text-white" href="#">Đăng ký (Multi-step)</a>
+    </div>
+  </nav>
+
+  <div class="container my-5" style="max-width: 600px;">
+    <h3 class="mb-4 text-center">ĐĂNG KÝ TÀI KHOẢN TLU</h3>
+
+    <div class="progress mb-4" style="height: 25px;">
+      <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 33%;">Bước 1 / 3</div>
+    </div>
+
+    <div id="successMessage" class="alert alert-success d-none text-center">
+      <h4>🎉 Chúc mừng!</h4>
+      <p>Bạn đã hoàn thành đăng ký tài khoản thành công.</p>
+    </div>
+
+    <form id="multiStepForm" class="card p-4 shadow-sm" novalidate>
+      
+      <div class="form-step" id="step1">
+        <h5 class="mb-3 border-bottom pb-2 text-primary">Bước 1: Thông tin cá nhân</h5>
+        
+        <div class="mb-3">
+          <label for="fullname" class="form-label fw-bold">Họ và tên *</label>
+          <input type="text" class="form-control" id="fullname" placeholder="Nhập họ và tên">
+          <div class="invalid-feedback" id="fullnameError"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="dob" class="form-label fw-bold">Ngày sinh *</label>
+          <input type="date" class="form-control" id="dob">
+          <div class="invalid-feedback" id="dobError"></div>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label fw-bold d-block">Giới tính *</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Nam">
+            <label class="form-check-label" for="genderMale">Nam</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Nữ">
+            <label class="form-check-label" for="genderFemale">Nữ</label>
+          </div>
+          <input type="hidden" id="genderHidden" class="form-control">
+          <div class="invalid-feedback" id="genderError"></div>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-primary px-4" id="btnNext1">Tiếp theo ➔</button>
+        </div>
+      </div>
+
+      <div class="form-step d-none" id="step2">
+        <h5 class="mb-3 border-bottom pb-2 text-primary">Bước 2: Thông tin tài khoản</h5>
+
+        <div class="mb-3">
+          <label for="email" class="form-label fw-bold">Email *</label>
+          <input type="email" class="form-control" id="email" placeholder="name@domain.com">
+          <div class="invalid-feedback" id="emailError"></div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label fw-bold">Mật khẩu *</label>
+          <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
+          <div class="invalid-feedback" id="passwordError"></div>
+        </div>
+
+        <div class="mb-4">
+          <label for="confirmPassword" class="form-label fw-bold">Xác nhận mật khẩu *</label>
+          <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+          <div class="invalid-feedback" id="confirmPasswordError"></div>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary px-4" id="btnPrev2">🡨 Quay lại</button>
+          <button type="button" class="btn btn-primary px-4" id="btnNext2">Tiếp theo ➔</button>
+        </div>
+      </div>
+
+      <div class="form-step d-none" id="step3">
+        <h5 class="mb-3 border-bottom pb-2 text-primary">Bước 3: Xác nhận thông tin</h5>
+        
+        <ul class="list-group mb-4" id="summaryList">
+          </ul>
+
+        <div class="d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary px-4" id="btnPrev3">🡨 Quay lại</button>
+          <button type="submit" class="btn btn-success px-4" id="btnSubmit">Hoàn tất Đăng ký ✓</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <footer class="footer bg-primary text-white py-3 mt-auto">
+    <p>TRƯỜNG ĐẠI HỌC THỦY LỢI<br>
+    175 Tây Sơn, Đống Đa, Hà Nội<br>
+    Điện thoại: (024) 38522201, Fax: (024) 35633351<br>
+    Email: phonghcth@tlu.edu.vn</p>
+  </footer>
+
+  <script src="multistep.js"></script>
+</body>
+</html>

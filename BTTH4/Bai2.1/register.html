@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký tài khoản</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark text-white px-4">
+    <span class="navbar-brand">Trường Đại học Thủy lợi</span>
+    <div>
+      <a class="text-white me-3" href="#">Trang chủ</a>
+      <a class="text-white" href="#">Đăng ký</a>
+    </div>
+  </nav>
+
+  <div class="container my-5" style="max-width: 600px;">
+    <h3 class="mb-4 text-center">ĐĂNG KÝ TÀI KHOẢN</h3>
+
+    <div id="successMessage" class="alert alert-success d-none text-center">
+      <h4>Đăng ký thành công! 🎉</h4>
+      <p>Chào mừng <strong id="registeredName"></strong> đã đến với hệ thống.</p>
+    </div>
+
+    <form id="registerForm" class="card p-4 shadow-sm" novalidate>
+      
+      <div class="mb-3">
+        <label for="fullname" class="form-label fw-bold">Họ và tên *</label>
+        <input type="text" class="form-control" id="fullname" placeholder="Nhập họ và tên">
+        <div class="invalid-feedback" id="fullnameError"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label fw-bold">Email *</label>
+        <input type="email" class="form-control" id="email" placeholder="name@domain.com">
+        <div class="invalid-feedback" id="emailError"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label fw-bold">Số điện thoại *</label>
+        <input type="text" class="form-control" id="phone" placeholder="VD: 0912345678">
+        <div class="invalid-feedback" id="phoneError"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label fw-bold">Mật khẩu *</label>
+        <input type="password" class="form-control" id="password" placeholder="Tối thiểu 8 ký tự, gồm chữ hoa, chữ thường, số">
+        <div class="invalid-feedback" id="passwordError"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label fw-bold">Xác nhận mật khẩu *</label>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+        <div class="invalid-feedback" id="confirmPasswordError"></div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold d-block">Giới tính *</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Nam">
+          <label class="form-check-label" for="genderMale">Nam</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Nữ">
+          <label class="form-check-label" for="genderFemale">Nữ</label>
+        </div>
+        <input type="hidden" class="form-control" id="genderHidden">
+        <div class="invalid-feedback" id="genderError"></div>
+      </div>
+
+      <div class="mb-4 form-check">
+        <input type="checkbox" class="form-check-input" id="terms">
+        <label class="form-check-label" for="terms">Tôi đồng ý với các điều khoản và điều kiện *</label>
+        <div class="invalid-feedback" id="termsError"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">ĐĂNG KÝ</button>
+    </form>
+  </div>
+
+  <footer class="footer bg-primary text-white py-3 mt-auto">
+    <p>TRƯỜNG ĐẠI HỌC THỦY LỢI<br>
+    175 Tây Sơn, Đống Đa, Hà Nội<br>
+    Điện thoại: (024) 38522201, Fax: (024) 35633351<br>
+    Email: phonghcth@tlu.edu.vn</p>
+  </footer>
+
+  <script src="register.js"></script>
+</body>
+</html>
